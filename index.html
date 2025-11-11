@@ -10,6 +10,21 @@
   <script src="https://toruskit.com/tkop.js" data-tor-init="auto"></script>
 
   <script>
+	  TORUS.init();
+
+	  window.addEventListener("load", () => {
+  if (window.TorusKit && window.TorusKit.reinit) window.TorusKit.reinit();
+
+  setTimeout(() => {
+    document.getElementById("loader").classList.add("hide");
+  }, 1200);
+});
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.tor) {
+      tor.init();
+    }
+  });
+	  
 	  document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("img").forEach(img => {
       img.loading = "eager"; 
