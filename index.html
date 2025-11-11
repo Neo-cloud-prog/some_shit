@@ -10,6 +10,14 @@
   <script src="https://toruskit.com/tkop.js" data-tor-init="auto"></script>
 
   <script>
+	  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("img").forEach(img => {
+      img.loading = "eager"; 
+      const src = img.src;
+      img.src = ""; 
+      img.src = src;
+    });
+  });
     document.addEventListener("DOMContentLoaded", () => {
       const imgs = Array.from(document.images);
       let loaded = 0;
