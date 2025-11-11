@@ -1,4 +1,9 @@
-TORUS.init();
+
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.tor) {
+      tor.init();
+    }
+  });
 
 var elements = document.getElementsByClassName("piece");
 var SumEatingPieces = 0;
