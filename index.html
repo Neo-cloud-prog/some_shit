@@ -2,78 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For my nigga</title>
-  <link rel="stylesheet" href="style.css">
-
-  <script src="https://toruskit.com/tkop.js" data-tor-init="auto"></script>
-
-  <script>
-	  TORUS.init();
-
-	  window.addEventListener("load", () => {
-  if (window.TorusKit && window.TorusKit.reinit) window.TorusKit.reinit();
-
-  setTimeout(() => {
-    document.getElementById("loader").classList.add("hide");
-  }, 1200);
-});
-  window.addEventListener('DOMContentLoaded', () => {
-    if (window.tor) {
-      tor.init();
-    }
-  });
-	  
-	  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("img").forEach(img => {
-      img.loading = "eager"; 
-      const src = img.src;
-      img.src = ""; 
-      img.src = src;
-    });
-  });
-    document.addEventListener("DOMContentLoaded", () => {
-      const imgs = Array.from(document.images);
-      let loaded = 0;
-      const total = imgs.length;
-
-      function checkAllLoaded() {
-        loaded++;
-        if (loaded === total) {
-          document.body.classList.add("ready");
-        }
-      }
-
-      imgs.forEach(img => {
-        if (img.complete) checkAllLoaded();
-        else img.addEventListener("load", checkAllLoaded);
-        img.addEventListener("error", checkAllLoaded);
-      });
-    });
-  </script>
-
-  <style>
-    body {
-      opacity: 0;
-      transition: opacity 1s ease;
-      overflow: hidden;
-    }
-
-    body.ready {
-      opacity: 1;
-      overflow: auto;
-    }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>For my lil nigga</title>
+	<script src="https://toruskit.com/tkop.js"></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div id="loader">🍰 Loading Cake...</div>
-	
 	<div class="wrapper" data-tor-group="
     .piece =>
       rotateZ(/+30/deg) translateZ(-100vh)
-      animate:[translateZ(0em <5s, spring(30, 15), delay: /random(10, 100)/ms>)]
+      animate:[translateZ(0em <5s, spring(30, 15), delay: /random(50, 500)/ms>)]
       hover:[translateZ(2em) @keep-shadow/+1/]
       click:translateZ(100vh)
     ;
@@ -363,7 +303,7 @@
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.23.0/sweetalert2.all.js"></script>
-    <script src="script.js"></script>
+	<script src="script.js"></script>
 </body>
 
 </html>
