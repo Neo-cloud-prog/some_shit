@@ -2,13 +2,46 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>For u nigga</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="https://toruskit.com/tkop.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.23.0/sweetalert2.all.js"></script>
-	<script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For my nigga</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://toruskit.com/tkop.js" data-tor-init="auto"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const imgs = Array.from(document.images);
+      let loaded = 0;
+      const total = imgs.length;
+
+      function checkAllLoaded() {
+        loaded++;
+        if (loaded === total) {
+          document.body.classList.add("ready");
+        }
+      }
+
+      imgs.forEach(img => {
+        if (img.complete) checkAllLoaded();
+        else img.addEventListener("load", checkAllLoaded);
+        img.addEventListener("error", checkAllLoaded);
+      });
+    });
+  </script>
+
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity 1s ease;
+      overflow: hidden;
+    }
+
+    body.ready {
+      opacity: 1;
+      overflow: auto;
+    }
+  </style>
 </head>
 
 <body>
@@ -304,6 +337,8 @@
 
 		</div>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.23.0/sweetalert2.all.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
