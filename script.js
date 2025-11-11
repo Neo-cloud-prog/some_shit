@@ -1,16 +1,4 @@
 TORUS.init();
-window.addEventListener("load", () => {
-  if (window.TorusKit && window.TorusKit.reinit) window.TorusKit.reinit();
-
-  setTimeout(() => {
-    document.getElementById("loader").classList.add("hide");
-  }, 1200);
-});
-  window.addEventListener('DOMContentLoaded', () => {
-    if (window.tor) {
-      tor.init();
-    }
-  });
 
 var elements = document.getElementsByClassName("piece");
 var SumEatingPieces = 0;
